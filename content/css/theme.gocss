@@ -1,0 +1,28 @@
+:root {
+    --font-family: monospace;
+    --color: {{ .Env.COLOR }};
+    --background-color: {{ .Env.BACKGROUND_COLOR }};
+    {{ if .Env.BACKGROUND_IMAGE }}
+    --background-image: url("{{ .Env.BACKGROUND_IMAGE }}");
+    {{ else }}
+    --background-image: none;
+    {{ end }}
+    --border-color: {{ .Env.BORDER_COLOR }};
+}
+
+{{ if not .Env.PIXEL_BACKGROUND }}
+body {
+    min-height: 100vh;
+}
+{{ end }}
+
+section {
+    --flag-size: 48px;
+    --padding: 10px;
+    {{ if .Env.SECTION_BACKGROUND_COLOR }}
+    --background-color: {{ .Env.SECTION_BACKGROUND_COLOR }};
+    {{ else }}
+    --background-color: {{ .Env.BACKGROUND_COLOR }}AF;
+    {{ end }}
+}
+

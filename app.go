@@ -12,6 +12,7 @@ func main() {
     app := kern.New(":5000", []string{ "content" } )
 
     // mount index.gohtml on "/"
+    app.Router.Get("/css/theme.css", view.NewCssHandler( app.Hierarchy.LookupFatal( "css", "theme.gocss" ) ) )
     app.Router.Get("/", view.NewHtmlHandler( app.Hierarchy.LookupFatal( "views", "index.gohtml" ) ) )
 
     // start server

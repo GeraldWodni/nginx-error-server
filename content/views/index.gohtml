@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <title>{{.Env.APP_NAME}}{{.Env.TITLE_SUFFIX}}</title>
+    <link rel="stylesheet" href="/css/theme.css"/>
     <link rel="stylesheet" href="/css/index.css"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
-    <img id="pixel-background" width="165" height="64" src="/images/saturn-h64.jpg"/>
+    {{ if .Env.PIXEL_BACKGROUND }}
+    <img id="pixel-background" width="165" height="64" src="{{ .Env.PIXEL_BACKGROUND }}"/>
+    {{ end }}
     <section class="owner">
         <h1>{{.Env.APP_NAME}}</h1>
         <img class="logo" src="https://teamwörk.at/images/logo.svg" alt="logo"/>

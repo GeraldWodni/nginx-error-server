@@ -1,7 +1,11 @@
 :root {
-    --font-family: monospace;
-    --color: #FFF;
-    --background-color: #000;
+    /*--color: #FFF;*/
+    /*--background-color: #000;*/
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -12,6 +16,11 @@ body {
     font-family: var(--font-family);
     color: var(--color);
     background-color: var(--background-color);
+
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
 }
 
 #pixel-background {
@@ -31,9 +40,6 @@ body {
 }
 
 section {
-    --border-color: #c7dff9;
-    --background-color: #181526Af;
-
     max-width: 40ch;
     margin-block: 1rem;
     margin-inline: auto;
@@ -50,12 +56,10 @@ section.owner {
 
 section.owner img.logo {
     max-width: 40%;
+    margin-bottom: var(--padding);
 }
 
 section.info {
-    --flag-size: 48px;
-    --padding: 10px;
-
     display: grid;
     grid-template-columns: 1fr calc( var(--flag-size) + var(--padding) );
     grid-template-rows: var(--flag-size) repeat(auto-fit, 1fr);
