@@ -12,7 +12,7 @@ func main() {
     app := kern.New(":5000", []string{ "content" } )
 
     // mount index.gohtml on "/"
-    app.Router.Get("/", view.NewHandler( app.Hierarchy.LookupFatal( "views", "index.gohtml" ) ) )
+    app.Router.Get("/", view.NewHtmlHandler( app.Hierarchy.LookupFatal( "views", "index.gohtml" ) ) )
 
     // start server
     app.Run()
