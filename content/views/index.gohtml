@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{.Globals.AppName}}{{.Globals.TitleSuffix}}</title>
+    <title>{{.Env.APP_NAME}}{{.Env.TITLE_SUFFIX}}</title>
     <link rel="stylesheet" href="/css/index.css"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -9,31 +9,39 @@
 <body>
     <img id="pixel-background" width="165" height="64" src="/images/saturn-h64.jpg"/>
     <section class="owner">
-        <h1>TeamWörk</h1>
+        <h1>{{.Env.APP_NAME}}</h1>
         <img class="logo" src="https://teamwörk.at/images/logo.svg" alt="logo"/>
     </section>
-    <section class="info german">
+    <section class="info german" lang="de-AT">
         <img class="flag" src="/images/flags/at.png" alt="de-AT"/>
-        <h2>Überschrift</h2>
+        <h2>{{.Env.DE_HEADER}}</h2>
         <div class="content">
-            <p>
-                Lorem ipsum dolor sit amet condar in, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-                At vero eos et accusam et justo duo dolores et ea rebum.
-                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            {{if .Env.DE_TEXT }}
+                {{range $i := .Env.DE_TEXT | Lines | NonEmpty }}
+                    <p>
+                        {{ $i }}
+                    </p>
+                {{end}}
+            {{end}}
+            {{if .Env.DE_HTML}}
+                {{.Env.DE_HTML}}
+            {{end}}
         </div>
     </section>
     <section class="info english">
         <img class="flag" src="/images/flags/uk.png" alt="en-UK"/>
-        <h2>Header</h2>
+        <h2>{{.Env.EN_HEADER}}</h2>
         <div class="content">
-            <p>
-                Lorem ipsum dolor sit amet condar in, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-            </p>
-            <p>
-                At vero eos et accusam et justo duo dolores et ea rebum.
-                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            {{if .Env.EN_TEXT }}
+                {{range $i := .Env.EN_TEXT | Lines | NonEmpty }}
+                    <p>
+                        {{ $i }}
+                    </p>
+                {{end}}
+            {{end}}
+            {{if .Env.EN_HTML}}
+                {{.Env.EN_HTML}}
+            {{end}}
         </div>
     </section>
 </body>
