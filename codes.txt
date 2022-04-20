@@ -1,0 +1,209 @@
+index Unconfigured Host
+Welcome to the cluster, your service is not yet configured. Please try again later.
+Unkonfigurierter ANschluss
+Wilkommen im cluster, Ihr Service ist noch nicht konfiguriert. Bitte probieren Sie es nochmal später. 
+
+999 Unknown statuscode requested 
+What is going on?
+Unbekannter Status code
+Was ist hier los?
+
+400 Bad Request
+You are handcrafting an HTTP request, and that is okay! But please adhere to the standard ;)
+Ungültige Anfrage
+Sie haben eine handgemachten HTTP Anfrage gebastelt, das ist okay! Aber bitte halten Sie sich an den Standard ;)
+
+401 Unauthorized
+Access Denied
+Unautorisiert
+Zugriff verweigert
+
+402 Payment Required
+Insert coins
+Bezahlung benötigt
+Münzen einwerfen
+
+403 Forbidden
+Access Denied
+Verboten
+Zugriff verweigert
+
+404 Not Found
+Whatever you are looking for is gone, sorry about that :( Maybe enjoy the aurora of Jupiter ;)
+Nicht gefunden
+Was auch immer Sie gesucht haben ist weg, tut leid :( Vielleicht erfreuen Sie sich an den Ringen von Saturn ;)
+
+405 Method Not Allowed
+REST-Foo not sufficient
+Methode nicht erlaubt
+REST-Fähigkeiten nicht ausreichend
+
+406 Not Acceptable
+What format is that? Never heard of it, sorry.
+Nicht akzeptabel
+Was ist dass den für ein Format? Kennen wir nicht, tut leid.
+
+407 Proxy Authentication Required (RFC 7235)
+Talk to your manager about that.
+Proxy-Authentifizierung benötigt
+Fragen Sie Ihren Manager warum die IT den Proxy nicht selbst betreiben darf.
+
+408 Request Timeout
+Please hurry up typing your request into nc.
+Anfrage-Zeitüberschreitung
+Bitte beeilen Sie sich beim tippen über nc.
+
+409 Conflict
+Too much going on.
+Konflikt
+Zu viel los.
+
+410 Gone
+Like 404 but without F5 retries.
+Verschwunden
+Wie 404 aber F5 wird niemals helfen.
+
+411 Length Required
+We need you to specify the length of your content please.
+Länge benötigt
+Bitte teilen Sie uns die Länge Ihres Inhalts mit.
+
+412 Precondition Failed
+Try being more generous in what you request?
+Vorbedingung missglückt
+Vielleicht versuchen Sie eine allgemeinere Anfrage?
+
+413 Payload Too Large
+Sorry, please make that file smaller before uploading.
+Anfrage-Entität zu groß
+Bitte verkleinern Sie die Datei vor dem Hochladen.
+
+414 URI Too Long
+TL;DR
+Anfrage-URI zu lang
+Wer hat Zeit das alles zu lesen?
+
+415 Unsupported Media Type
+Try another format.
+Nicht unterstützter Medientyp
+Versuchen Sie ein anderes Format.
+
+416 Range Not Satisfiable
+"Segmentation Fault" but with HTTP.
+Anfrage-Bereich nicht erfüllbar
+Fast so cool wie ein wie eine Speicherzugriffsverletzung, aber über HTTP.
+
+417 Expectation Failed
+You expect too much of this request.
+Erwartung missglückt
+Sie erwarten zuviel von dieser Anfrage.
+
+418 I'm a teapot
+Not really, but I can turn one on via a WiFi-Plug. Do you want me to do that? Than please send the correct magic header.
+Ich bin ein Teehäferl
+Na ned wirklich, aber ich kann WLAN-Steckdosen steuern. Aber nur wenn Du mir den korrekten, magischen Header schickst.
+
+421 Misdirected Request
+That is someone elses fault, don't blame us.
+Fehlgeleitete Anforderung
+Bitte die Schuld an jemand anderen weiterleiten.
+
+422 Unprocessable Entity (WebDAV; RFC 4918)
+Good syntax, bad semantics.
+Kann nicht verarbeitet werden
+Guter Syntax, aber schlechte Semantik.
+
+423 Locked
+Chained up, this resource goes nowhere!
+Gesperrt
+Diese Resource bleibt hier!
+
+424 Failed Dependency
+A waterfall of fails.
+Vorhergehende Bedingung nicht erfüllt
+So viele Fehler.
+
+425 Too Early
+Try again later.
+Zu zeitig
+Bitte versuchen Sie es später nochmal.
+
+426 Upgrade Required
+Check the Upgrade header and request ask again.
+Update benötigt
+Überprüfen Sie den Upgrade-Header und versucheh Sie es nochmal.
+
+428 Precondition Required
+Potential conflict.
+Vorbedingung benötigt
+Potentieller Konflikt.
+
+429 Too Many Requests
+Calm down friend, we can only serve so many requests from your client.
+Zu viele Anfragen
+Langsam mein Freund, wir können nur eine begrenzte Anfragenanzahl von Ihrem Klienten bedienen.
+
+431 Request Header Fields Too Large
+This is not how we intended this API to be used.
+Länge zu groß
+So wollten wir diese API nicht verwendet wissen.
+
+451 Unavailable For Legal Reasons
+Consult a lawyer.
+Ressource aus rechtlichen Gründen nicht verfügbar
+Fragen Sie Ihren Anwalt oder Apotheker.
+
+500 Internal Server Error
+We messed something up and are trying to fix it. Please stand by.
+Interner Server-Fehler
+Wir haben etwas vermasselt und sind dabei es zu reparieren. Bitte haben Sie Geduld.
+
+501 Not Implemented
+Not sure what you want or were too lazy implementing it.
+Nicht implementiert
+Nicht ganz klar was Sie wünschen, oder wir waren zu faul es zu implementieren.
+
+502 Bad Gateway
+The service cannot be found in the cluster. Please try again later.
+Schlechtes Portal
+Der Service kann im Cluster nicht gefunden werden. Bitte probieren Sie es später nochmal.
+
+503 Service Unavailable
+The service cannot be found in the cluster - we are most likely doing maintenance. Please try again later.
+Dienst nicht verfügbar
+Der Service kann im Cluster nicht gefunden werden - wir machen sehr wahrscheinlich gerade eine Warung. Bitte probieren Sie es später nochmal.
+
+504 Gateway Timeout
+The service cannot be found in the cluster. Please try again later.
+Portal-Auszeit
+Der Service kann im Cluster nicht gefunden werden. Bitte probieren Sie es später nochmal.
+
+505 HTTP Version Not Supported
+Wow either this version is sooper old or too new for us old guys.
+HTTP-Version nicht unterstützt
+Wow entweder ist diese Version uralt oder zu neu für uns alte Programmierer.
+
+506 Variant Also Negotiates
+Hmmm?
+Zirkelbezug
+Aha?
+
+507 Insufficient Storage
+Sorry our disks are full or your quota has been exceeded.
+Speicher des Servers reicht nicht aus
+Unsere Platten sind voll oder Ihre Zuteilung wurde überschritten.
+
+508 Loop Detected
+Getting dizzy.
+Endlosschleife
+Alles dreht sich.
+
+510 Not Extended
+Hmmm?
+Zu wenig Informationen
+Aha?
+
+511 Network Authentication Required
+If you can read this one of us messed up the cluster very badly :(
+Identizifierung benötigt
+Wenn Sie das lesen können hat einer von uns beiden den Cluster unglücklich gemacht :(
