@@ -1,4 +1,6 @@
-FROM golang:1.18-alpine AS builder
+ARG REG_HOSTNAME
+ARG REG_FOLDER
+FROM ${REG_HOSTNAME}/${REG_FOLDER}/golang:1.18-alpine AS builder
 
 RUN apk --no-cache add \
     git
@@ -19,7 +21,7 @@ RUN cp -R $GOPATH/pkg/mod/github.com/\!gerald\!wodni/kern*/default .
 COPY content content
 
 
-FROM golang:1.18-alpine
+FROM ${REG_HOSTNAME}/${REG_FOLDER}/golang:1.18-alpine
 
 WORKDIR /app
 
