@@ -3,8 +3,8 @@
 package main
 
 import (
-    "boolshit.net/kern"
-    "boolshit.net/kern/view"
+    "github.com/GeraldWodni/kern.go"
+    "github.com/GeraldWodni/kern.go/view"
 )
 
 func main() {
