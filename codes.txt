@@ -101,7 +101,7 @@ Sie erwarten zuviel von dieser Anfrage.
 418 I'm a teapot
 Not really, but I can turn one on via a WiFi-Plug. Do you want me to do that? Than please send the correct magic header.
 Ich bin ein Teehäferl
-Na ned wirklich, aber ich kann WLAN-Steckdosen steuern. Aber nur wenn Du mir den korrekten, magischen Header schickst.
+Na ned wirklich, aber ich kann WLAN-Steckdosen steuern. Aber nur wenn Sie mir den korrekten, magischen Header schicken.
 
 421 Misdirected Request
 That is someone elses fault, don't blame us.

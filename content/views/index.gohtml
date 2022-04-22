@@ -1,51 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>{{.Env.APP_NAME}}{{.Env.TITLE_SUFFIX}}</title>
-    <link rel="stylesheet" href="/css/theme.css"/>
-    <link rel="stylesheet" href="/css/index.css"/>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-</head>
-<body>
-    {{ if .Env.PIXEL_BACKGROUND }}
-    <img id="pixel-background" width="165" height="64" src="{{ .Env.PIXEL_BACKGROUND }}"/>
-    {{ end }}
-    <section class="owner">
-        <h1>{{.Env.APP_NAME}}</h1>
-        <img class="logo" src="https://teamwörk.at/images/logo.svg" alt="logo"/>
-    </section>
-    <section class="info german" lang="de-AT">
-        <img class="flag" src="/images/flags/at.png" alt="de-AT"/>
-        <h2>{{.Env.DE_HEADER}}</h2>
-        <div class="content">
-            {{if .Env.DE_TEXT }}
-                {{range $i := .Env.DE_TEXT | Lines | NonEmpty }}
-                    <p>
-                        {{ $i }}
-                    </p>
-                {{end}}
+{{define "content"}}
+<section class="info german" lang="de-AT">
+    <img class="flag" src="/images/flags/at.png" alt="de-AT"/>
+    <h2>{{.Env.DE_HEADER}}</h2>
+    <div class="content">
+        {{if .Env.DE_TEXT }}
+            {{range $i := .Env.DE_TEXT | Lines | NonEmpty }}
+                <p>
+                    {{ $i }}
+                </p>
             {{end}}
-            {{if .Env.DE_HTML}}
-                {{.Env.DE_HTML}}
+        {{end}}
+        {{if .Env.DE_HTML}}
+            {{.Env.DE_HTML}}
+        {{end}}
+    </div>
+</section>
+<section class="info english">
+    <img class="flag" src="/images/flags/uk.png" alt="en-UK"/>
+    <h2>{{.Env.EN_HEADER}}</h2>
+    <div class="content">
+        {{if .Env.EN_TEXT }}
+            {{range $i := .Env.EN_TEXT | Lines | NonEmpty }}
+                <p>
+                    {{ $i }}
+                </p>
             {{end}}
-        </div>
-    </section>
-    <section class="info english">
-        <img class="flag" src="/images/flags/uk.png" alt="en-UK"/>
-        <h2>{{.Env.EN_HEADER}}</h2>
-        <div class="content">
-            {{if .Env.EN_TEXT }}
-                {{range $i := .Env.EN_TEXT | Lines | NonEmpty }}
-                    <p>
-                        {{ $i }}
-                    </p>
-                {{end}}
-            {{end}}
-            {{if .Env.EN_HTML}}
-                {{.Env.EN_HTML}}
-            {{end}}
-        </div>
-    </section>
-</body>
-</html>
+        {{end}}
+        {{if .Env.EN_HTML}}
+            {{.Env.EN_HTML}}
+        {{end}}
+    </div>
+</section>
+{{end}}

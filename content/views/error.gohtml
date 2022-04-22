@@ -1,0 +1,20 @@
+{{define "content"}}
+<section class="info german" lang="de-AT">
+    <img class="flag" src="/images/flags/at.png" alt="de-AT"/>
+    <h2>{{ .Locals.StatusCode.Code }} {{.Locals.StatusCode.MessageDE}}</h2>
+    <div class="content">
+        <p>
+            {{ .Locals.StatusCode.DescriptionDE }}
+        </p>
+    </div>
+</section>
+<section class="info english">
+    <img class="flag" src="/images/flags/uk.png" alt="en-UK"/>
+    <h2>{{ .Locals.StatusCode.Code }} {{.Locals.StatusCode.MessageEN}}</h2>
+    <div class="content">
+        <p>
+            {{ .Locals.StatusCode.DescriptionEN }}
+        </p>
+    </div>
+</section>
+{{end}}
