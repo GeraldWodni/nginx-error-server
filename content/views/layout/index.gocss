@@ -1,0 +1,121 @@
+{{ define "style" }}
+:root {
+    --font-family: monospace;
+    --color: {{ .Env.COLOR }};
+    --background-color: {{ .Env.BACKGROUND_COLOR }};
+    {{ if .Env.BACKGROUND_IMAGE }}
+    --background-image: url("{{ .Env.BACKGROUND_IMAGE }}");
+    {{ else }}
+    --background-image: none;
+    {{ end }}
+    --border-color: {{ .Env.BORDER_COLOR }};
+}
+
+{{ if not .Env.PIXEL_BACKGROUND }}
+body {
+    min-height: 100vh;
+}
+{{ end }}
+
+section {
+    --flag-size: 48px;
+    --padding: 10px;
+    {{ if .Env.SECTION_BACKGROUND_COLOR }}
+    --background-color: {{ .Env.SECTION_BACKGROUND_COLOR }};
+    {{ else }}
+    --background-color: {{ .Env.BACKGROUND_COLOR }}AF;
+    {{ end }}
+}
+
+
+
+:root {
+    /*--color: #FFF;*/
+    /*--background-color: #000;*/
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+
+    font-size: 11pt;
+    font-family: var(--font-family);
+    color: var(--color);
+    background-color: var(--background-color);
+
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+}
+
+#pixel-background {
+    display: block;
+    z-index: -1000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-bottom: -165px;
+    top: 0;
+    left: 0;
+
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    object-fit: cover;
+    object-position: left center;
+}
+
+section {
+    max-width: 40ch;
+    margin-block: 1rem;
+    margin-inline: auto;
+
+
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 2px var(--border-color);
+    background-color: var(--background-color);
+}
+
+section.owner {
+    text-align: center;
+}
+
+section.owner img.logo {
+    max-width: 40%;
+    margin-bottom: var(--padding);
+}
+
+section.info {
+    display: grid;
+    grid-template-columns: 1fr calc( var(--flag-size) + var(--padding) );
+    grid-template-rows: var(--flag-size) repeat(auto-fit, 1fr);
+    grid-template-areas:
+        "header flag"
+        "content content";
+}
+
+section.info h2 {
+    grid-area: header;
+    margin: 0;
+    line-height: var(--flag-size);
+    padding-left: var(--padding);
+}
+
+section.info img.flag {
+    grid-area: flag;
+}
+
+section.info div.content {
+    grid-area: content;
+    padding-inline: var(--padding);
+}
+
+section.info div.content *:first-child {
+    margin-top: 0;
+}
+{{ end }}
