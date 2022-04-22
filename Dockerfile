@@ -29,4 +29,4 @@ COPY --from=builder /app .
 
 EXPOSE 5000
 
-CMD [ nginx-error-server ]
+CMD [ ./nginx-error-server ]
