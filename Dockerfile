@@ -19,6 +19,7 @@ RUN go build -o nginx-error-server
 
 RUN cp -R $GOPATH/pkg/mod/github.com/\!gerald\!wodni/kern*/default .
 COPY content content
+COPY codes.txt codes.txt
 
 
 FROM ${REG_HOSTNAME}/${REG_FOLDER}/golang:1.18-alpine
@@ -29,4 +30,4 @@ COPY --from=builder /app .
 
 EXPOSE 5000
 
-CMD [ ./nginx-error-server ]
+CMD [ "/app/nginx-error-server" ]
