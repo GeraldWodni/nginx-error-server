@@ -29,9 +29,9 @@ Verboten
 Zugriff verweigert
 
 404 Not Found
-Whatever you are looking for is gone, sorry about that :( Maybe enjoy the aurora of Jupiter ;)
+Whatever you are looking for is gone, sorry about that :(
 Nicht gefunden
-Was auch immer Sie gesucht haben ist weg, tut leid :( Vielleicht erfreuen Sie sich an den Ringen von Saturn ;)
+Was auch immer Sie gesucht haben ist weg, tut leid :(
 
 405 Method Not Allowed
 REST-Foo not sufficient
