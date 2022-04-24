@@ -9,6 +9,7 @@
     --background-image: none;
     {{ end }}
     --border-color: {{ .Env.BORDER_COLOR }};
+    --padding: 10px;
 }
 
 {{ if not .Env.PIXEL_BACKGROUND }}
@@ -19,7 +20,6 @@ body {
 
 section {
     --flag-size: 48px;
-    --padding: 10px;
     {{ if .Env.SECTION_BACKGROUND_COLOR }}
     --background-color: {{ .Env.SECTION_BACKGROUND_COLOR }};
     {{ else }}
@@ -42,6 +42,7 @@ html, body {
 body {
     box-sizing: border-box;
     margin: 0;
+    padding-top: var(--padding);
 
     font-size: 11pt;
     font-family: var(--font-family);
