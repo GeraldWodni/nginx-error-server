@@ -11,6 +11,7 @@ html, body {
 body {
     box-sizing: border-box;
     margin: 0;
+    padding-top: var(--padding);
 
     font-size: 11pt;
     font-family: var(--font-family);
