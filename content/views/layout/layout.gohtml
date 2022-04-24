@@ -3,8 +3,6 @@
 <html lang="en">
 <head>
     <title>{{.Env.APP_NAME}}{{.Env.TITLE_SUFFIX}}</title>
-    <link rel="stylesheet" href="/css/theme.css"/>
-    <link rel="stylesheet" href="/css/index.css"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <style>
@@ -17,7 +15,9 @@
     {{ end }}
     <section class="owner">
         <h1>{{.Env.APP_NAME}}</h1>
-        <img class="logo" src="https://teamwörk.at/images/logo.svg" alt="logo"/>
+        {{ if .Env.APP_LOGO }}
+        <img class="logo" src="{{.Env.APP_LOGO}}" alt="logo"/>
+        {{ end }}
     </section>
     {{ template "content" . }}
 </body>
