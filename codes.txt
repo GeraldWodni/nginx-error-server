@@ -171,7 +171,7 @@ Der Service kann im Cluster nicht gefunden werden. Bitte probieren Sie es späte
 503 Service Unavailable
 The service cannot be found in the cluster - we are most likely doing maintenance. Please try again later.
 Dienst nicht verfügbar
-Der Service kann im Cluster nicht gefunden werden - wir machen sehr wahrscheinlich gerade eine Warung. Bitte probieren Sie es später nochmal.
+Der Service kann im Cluster nicht gefunden werden - wir machen sehr wahrscheinlich gerade eine Wartung. Bitte probieren Sie es später nochmal.
 
 504 Gateway Timeout
 The service cannot be found in the cluster. Please try again later.
