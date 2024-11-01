@@ -59,12 +59,6 @@ spec:
             }
         }
         stage("dockerpush") {
-            container('docker') {
-                sh 'docker push ${REG_HOSTNAME}/${REG_FOLDER}/nginx-error-server:b${BUILD_NUMBER}'
-                sh 'docker push ${REG_HOSTNAME}/${REG_FOLDER}/nginx-error-server:latest'
-            }
-        }
-        stage("dockerpush") {
             container('buildah') {
                 sh 'buildah push ${REG_HOSTNAME}/${REG_FOLDER}/nginx-error-server:b${BUILD_NUMBER}'
                 sh 'buildah push ${REG_HOSTNAME}/${REG_FOLDER}/nginx-error-server:latest'
