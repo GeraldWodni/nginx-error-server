@@ -1,6 +1,6 @@
 ARG REG_HOSTNAME
 ARG REG_FOLDER
-FROM ${REG_HOSTNAME}/${REG_FOLDER}/golang:1.18-alpine AS builder
+FROM ${REG_HOSTNAME}/${REG_FOLDER}/golang:1.23-alpine AS builder
 
 RUN apk --no-cache add \
     git
@@ -22,7 +22,7 @@ COPY content content
 COPY codes.txt codes.txt
 
 
-FROM ${REG_HOSTNAME}/${REG_FOLDER}/golang:1.18-alpine
+FROM ${REG_HOSTNAME}/${REG_FOLDER}/golang:1.23-alpine
 
 WORKDIR /app
 
