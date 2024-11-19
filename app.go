@@ -5,6 +5,7 @@ package main
 import (
     "fmt"
     "net/http"
+    "os"
     "strconv"
     "strings"
 
@@ -17,6 +18,7 @@ import (
 var layoutViews []view.HtmlView
 var errorView *view.HtmlView
 var indexView *view.HtmlView
+var ignoredErrors string
 
 func renderStatusCode(res http.ResponseWriter, req *http.Request, next router.RouteNext, statusCode StatusCode) {
     res.Header().Set("Content-Type", errorView.ContentType )
@@ -30,7 +32,7 @@ func renderStatusCode(res http.ResponseWriter, req *http.Request, next router.Ro
 }
 
 func defaultHandler(res http.ResponseWriter, req *http.Request, next router.RouteNext) {
-    if xCode := req.Header.Get("X-Code"); xCode != "" {
+    if xCode := req.Header.Get("X-Code"); xCode != "" && !ignoredErrors.contains( xCode ) {
         statusCode := GetStatusCode( xCode )
         code, _ := strconv.Atoi( statusCode.Code )
         if xFormat := req.Header.Get("X-Format"); xFormat != "" {
@@ -76,6 +78,8 @@ func main() {
     // mount index.gohtml on "/"
     app.Router.Get("/css/theme.css", view.NewCssHandler( app.Hierarchy.LookupFatal( "css", "theme.gocss" ) ) )
     app.Router.Get("/", defaultHandler )
+
+    ignoredErrors = os.Getenv("KERN_IGNORE_ERRORS");
 
     // start server
     app.Run()
