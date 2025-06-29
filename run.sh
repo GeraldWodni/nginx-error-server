@@ -36,4 +36,7 @@ KERN_VIEW_PIXEL_BACKGROUND=/images/saturn-h64.jpg
 #KERN_NO_WATCH=true
 #export KERN_NO_WATCH
 
+KERN_IGNORE_ERRORS="503,404"
+export KERN_IGNORE_ERRORS
+
 go run .

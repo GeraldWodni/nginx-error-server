@@ -32,7 +32,7 @@ func renderStatusCode(res http.ResponseWriter, req *http.Request, next router.Ro
 }
 
 func defaultHandler(res http.ResponseWriter, req *http.Request, next router.RouteNext) {
-    if xCode := req.Header.Get("X-Code"); xCode != "" && !ignoredErrors.contains( xCode ) {
+    if xCode := req.Header.Get("X-Code"); xCode != "" && !strings.Contains( ignoredErrors, xCode ) {
         statusCode := GetStatusCode( xCode )
         code, _ := strconv.Atoi( statusCode.Code )
         if xFormat := req.Header.Get("X-Format"); xFormat != "" {
